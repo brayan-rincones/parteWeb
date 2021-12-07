@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+
+  <!-- materialize icons, css & js -->
+
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!--    <link type="text/css" href="/css/styles.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+</head>
+
+<body class="grey lighten-4"> <!-- fondo gris -->
+
+<style>
+  nav{
+    background: seagreen;
+  }
+</style>
+
+  <!-- top nav -->
+<nav class="z-depth-2"> <!-- sombreado gris -->
+    <div class="nav-wrapper container">  <!-- clase de materialize: container -->
+      <a href="/">Home</a>
+      <span class="right white-text text-darken-1"> <!-- color barras menu -->
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>  <!-- menu desplegable, id: side-menu -->
+      </span>
+    </div>
+</nav>
+
+<ul id = "side-menu" class="sidenav side-menu">
+    <li><a href="/pages/agregar.html" class="waves-effect">Añadir</a></li>
+</ul>
+
+<!-- Listado de ovas -->
+
+<div class="ovas container grey-text text-darken-1">  <!-- container nombrado ovas, contendra lista de ovas. -->
+    
+    <div class= "card-panel ova white row">  <!-- paneles de tarjetas diferentes, nombrado ova, row es clase de materialize, expresa fila particular de contenido -->
+        <div class="ova-details">
+            <div class="ova-title">Celula</div>
+            <div class="ova-categoria">Ciencia</div>
+        </div>
+<!--         <div class="ova-delete">
+        <i class="material-icons">delete_outline</i>
+        </div> -->
+    </div>
+</div>
+
+<script src="/js/ui.js"></script>
+</body>
