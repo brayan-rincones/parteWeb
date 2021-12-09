@@ -9,7 +9,7 @@
 	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 <!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+	
 </head>
 
 <!-- style -->
@@ -53,102 +53,123 @@
 </style>
 <!-- form -->
 <body>
-<div class= "row add_ova">
-	<div class="col s12 14 offset-14">
-		<div class= "card">
-			<div class= "card-action gray white-text">
-				<h3>Nuevo OVA</h3>
-			</div>
 
-			<div class= "card-content">
+	<div class= "row add_ova">
+		<div class="col s12 14 offset-14">
+			<div class= "card">
+				<div class= "card-action gray white-text">
+					<h3>Nuevo OVA</h3>
+				</div>
+	
+				<div class= "card-content">
+	
+					<div class="form-field">
+						<label for= "titulo">Titulo</label>
+						<input placeholder="Ej: Celula" id="titulo" name="titulo" type="text" class="validate">
+					</div><br>
+					
+					<div class="form-field">
+						<label for= "autor">Autor</label>
+						<input placeholder="Ej: N. Luis" id="autor" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "subject">Tema</label>
+						<input placeholder="Ej: Nucleo" id="subject" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "description">Descripción</label>
+						<input placeholder="Ej: Aprendizaje sobre las funciones de la celula" id="description" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "categoria">Categoria</label>
+						<input placeholder="Ej: ciencias" id="categoria" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "lenguaje">Lenguaje</label>
+						<input placeholder="Ej: ciencias" id="lenguaje" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "editor">Editor</label>
+						<input placeholder="Ej: Z. Jose" id="editor" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "fuente">Fuente</label>
+						<input placeholder="Ej: Biologia celular" id="fuente" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "relation">Relación</label>
+						<input placeholder="Ej: Naturaleza" id="relation" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "covertura">Covertura</label>
+						<input placeholder="Ej: Microbiologia" id="covertura" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "derechos">Derechos</label>
+						<input placeholder="Ej: Institucion" id="derechos" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "format">Formato</label>
+						<input placeholder="Ej: PDF, XML" id="format" type="text" class="validate">
+					</div><br>
+	
+					<div class="form-field">
+						<label for= "date">Fecha publicación</label>
+						<input id="date" type="date" class="validate">
+					</div><br>
+	
+	
+					<div class="file-field input-field">
+						<div class="btn">
+						  <span>Cargar OVA</span>
+						  <input type="file">
+						</div>
+						<div class="file-path-wrapper">
+						  <input class="file-path validate" type="text">
+						</div>
+					  </div>
+	
+					<div class="form-field: center-align">
+						<button id="agregar" class="btn-large red" onclick="formVals()">Añadir</button>
+					</div><br>
+	
+	
+				</div>
+			</div>	
+		</div>		
+	</div>
+<!-- 
+	<h1>Nuevo OVA</h1>
 
-				<div class="form-field">
-					<label for= "titulo">Titulo</label>
-                	<input placeholder="Ej: Celula" id="titulo" type="text" class="validate">
-				</div><br>
-				
-				<div class="form-field">
-					<label for= "autor">Autor</label>
-                	<input placeholder="Ej: Celula" id="autor" type="text" class="validate">
-				</div><br>
+	<form id="add_ova">
+		<div class="formField">
+			<label for="titulo">Titulo</label>
+			<input id="titulo" name="titulo">
+		</div>
 
-				<div class="form-field">
-					<label for= "subject">Tema</label>
-                	<input placeholder="Ej: Celula" id="subject" type="text" class="validate">
-				</div><br>
+		<div class="formField">
+			<button id="btnGuardar">Añadir</button>
+		</div>
+	</form>
+-->
+	<script type="text/javascript" src="../js/materialize.min.js"></script> 
+	<script type="text/javascript" src = "../js/dataManage.js"></script>
 
-				<div class="form-field">
-					<label for= "description">Descripción</label>
-                	<input placeholder="Ej: Celula" id="description" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "categoria">Categoria</label>
-                	<input placeholder="Ej: ciencias" id="categoria" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "lenguaje">Lenguaje</label>
-                	<input placeholder="Ej: ciencias" id="lenguaje" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "editor">Editor</label>
-                	<input placeholder="Ej: ciencias" id="editor" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "fuente">Fuente</label>
-                	<input placeholder="Ej: ciencias" id="fuente" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "relation">Relación</label>
-                	<input placeholder="Ej: ciencias" id="relation" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "covertura">Covertura</label>
-                	<input placeholder="Ej: ciencias" id="covertura" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "derechos">Derechos</label>
-                	<input placeholder="Ej: ciencias" id="derechos" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "format">Formato</label>
-                	<input placeholder="Ej: ciencias" id="format" type="text" class="validate">
-				</div><br>
-
-				<div class="form-field">
-					<label for= "date">Fecha publicación</label>
-                	<input id="date" type="date" class="validate">
-				</div><br>
-
-
-				<div class="file-field input-field">
-					<div class="btn">
-					  <span>Cargar OVA</span>
-					  <input type="file">
-					</div>
-					<div class="file-path-wrapper">
-					  <input class="file-path validate" type="text">
-					</div>
-				  </div>
-
-				<div class="form-field: center-align">
-					<button class="btn-large red">Añadir</button>
-				</div><br>
-
-
-			</div>
-		</div>	
-	</div>		
-</div>
-<script type="text/javascript" src="../js/materialize.min.js"></script>
 </body>
+<!-- 
+
+ -->
+
 <!--
 <body>
     <div id="side-form">
